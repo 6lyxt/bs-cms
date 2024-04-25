@@ -1,6 +1,6 @@
 <?php
 
-namespace bs\admin\rest;
+namespace admin\rest;
 
 class Rest
 {

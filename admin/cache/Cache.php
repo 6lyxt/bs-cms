@@ -1,6 +1,6 @@
 <?php
 
-namespace bs\admin\cache;
+namespace admin\cache;
 
 class Cache
 {

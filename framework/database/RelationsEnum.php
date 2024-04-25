@@ -1,6 +1,6 @@
 <?php
 
-namespace bs\framework\database;
+namespace framework\database;
 
 /**
  * Class RelationsEnum

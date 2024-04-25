@@ -1,22 +1,36 @@
 <?php
 
-namespace bs\framework\util;
+namespace framework\util;
 
-use bs\framework\config\Config;
-use bs\framework\exception\NoResultException;
+use framework\config\Config;
+use framework\exception\NoResultException;
 use Exception;
 
 class Util
 {
 
 	/**
-	 * @throws \bs\framework\exception\NoResultException
+	 * @throws \framework\exception\NoResultException
 	 */
 	public static function throwNoResultException($message = 'No result found', $code = 0, Exception $previous = null): void
 	{
-		if(Config::DEBUG_MODE) {
+		if(Config::debug()) {
 			throw new NoResultException($message, $code, $previous);
 		}
+	}
+
+	/**
+	 * @throws \Exception
+	 */
+	public static function parseConfig(): array
+	{
+		$file = file_get_contents('config.json');
+
+		if(!$file) {
+			throw new Exception('Could not read config file');
+		}
+
+		return json_decode($file, true);
 	}
 
 

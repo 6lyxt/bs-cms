@@ -1,6 +1,6 @@
 <?php
 
-namespace bs\framework\log;
+namespace framework\log;
 
 class Log
 {

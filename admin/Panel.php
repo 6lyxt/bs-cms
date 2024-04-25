@@ -1,6 +1,6 @@
 <?php
 
-namespace bs\admin;
+namespace admin;
 
 /**
  * Class Panel

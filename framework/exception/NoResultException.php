@@ -1,5 +1,5 @@
 <?php
-namespace bs\framework\exception;
+namespace framework\exception;
 
 use Exception;
 

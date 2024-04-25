@@ -1,9 +1,12 @@
 <?php
 
-namespace bs\framework;
+namespace framework;
+
+use framework\test\TestRunner;
 
 /**
  * Class Kernel
+ *
  * @package bs\framework
  */
 class Kernel
@@ -21,29 +24,12 @@ class Kernel
 	 */
 	public function init(): void
 	{
-		$this->loadConfig();
-		$this->loadHelpers();
-		$this->loadDB();
+		$this->runTests();
 	}
 
-	/**
-	 * @return void
-	 */
-	public function loadConfig(): void
+	private function runTests(): void
 	{
-		require_once 'config/Config.php';
-	}
-
-	/**
-	 * @return void
-	 */
-	public function loadHelpers(): void
-	{
-		require_once 'util/utils.php';
-	}
-
-	private function loadDB(): void
-	{
-		require_once 'database/DB.php';
+		$runner = new TestRunner();
+		$runner->run();
 	}
 }
