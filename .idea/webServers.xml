@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e58e1f6f-29d2-4f12-ba8e-ca69ac35b849" name="jd">
+        <fileTransfer rootFolder="/usr/www/users/jddder" accessType="SFTP" host="dev7.cic.at" port="222" sshConfigId="53263859-4181-4d23-9682-e33f6fb3d4ec" sshConfig="jddder@dev7.cic.at:222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
